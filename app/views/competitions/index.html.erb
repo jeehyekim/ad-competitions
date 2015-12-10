@@ -9,7 +9,7 @@
         </div>
         <img src="<%= competition.image_url %>" alt="card-image" style="width: 100%">
           <div class="card-block">
-            <p><%= raw competition.tags.map(&:name).map { |t| link_to t, tag_path(t)}.join(', ') %></p>
+            <small><%= raw tag_links(competition.all_tags) %></small>
             <p><%= truncate(competition.description, :length => 200) %></p>
             <%= link_to "Edit", edit_competition_path(competition) %>
           </div>

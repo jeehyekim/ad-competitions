@@ -1,7 +1,11 @@
 class CompetitionsController < ApplicationController
 
   def index
-    @competitions = Competition.all
+    if params[:tag]
+      @competitions = Competition.tagged_with(params[:tag])
+    else
+      @competitions = Competition.all
+    end
     render :index
   end
 
@@ -40,7 +44,7 @@ class CompetitionsController < ApplicationController
   private
 
   def competition_params
-    params.require(:competition).permit(:title, :description, :website, :image_url, :early_bird, :deadline, :notification)
+    params.require(:competition).permit(:title, :description, :website, :image_url, :early_bird, :deadline, :notification, :all_tags)
   end
 
 end

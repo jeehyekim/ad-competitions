@@ -10,7 +10,7 @@
     <small>Website:</small>
     <a href="<%= @competition.website %>" id="comp-website"><%= @competition.website %></a><br>
     <small>Category:</small>
-    <p><%=  %></p>
+    <p><%= @competition.all_tags %></p>
   </div>
   <div class="col-sm-5 " id="comp-details">
       <p id="comp-desc"><%= @competition.description %></p>
