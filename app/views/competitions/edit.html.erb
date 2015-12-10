@@ -17,7 +17,10 @@
     <fieldset class="form-group">
       <%= f.text_field :image_url, placeholder: "Image URL", class: "form-control" %>
     </fieldset>
-    
+    <fieldset class="form-group">
+      <%= f.text_field :all_tags, placeholder: "Categories(separated by commas)", class: "form-control" %>
+    </fieldset>
+  
     <%= f.submit "Save", class: "btn" %>
   </form>
   <% end %>
