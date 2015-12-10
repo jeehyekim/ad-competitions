@@ -40,7 +40,7 @@ class CompetitionsController < ApplicationController
   private
 
   def competition_params
-    params.require(:competition).permit(:title, :description, :website, :image_url, :early_bird, :deadline, :notification)
+    params.require(:competition).permit(:title, :description, :website, :image_url, :early_bird, :deadline, :notification, :tag_list)
   end
 
 end
