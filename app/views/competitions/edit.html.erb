@@ -1,9 +1,9 @@
 <div class="col-sm-8 col-sm-offset-2">
-  <h1 class="text-center">New Competition</h1>
+  <h1 class="text-center">Edit Competition</h1>
 </div>
 
 <div class="col-sm-8 col-sm-offset-2">
-  <%= form_for @competition, url: competitions_path do |f| %>
+  <%= form_for @competition do |f| %>
   <form>
     <fieldset class="form-group">
       <%= f.text_field :title, placeholder: "Title", class: "form-control" %>
@@ -20,7 +20,7 @@
     <fieldset class="form-group">
       <%= f.text_field :tag_list, placeholder: "Categories separated with comma", class: "form-control" %>
     </fieldset>
-    <%= f.submit "Create", class: "btn" %>
+    <%= f.submit "Save", class: "btn" %>
   </form>
   <% end %>
 </div>

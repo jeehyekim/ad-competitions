@@ -32,6 +32,8 @@ gem 'bcrypt', '~> 3.1.7'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem "acts-as-taggable-on"
+
 gem 'rails_12factor', group: :production
 
 group :development, :test do

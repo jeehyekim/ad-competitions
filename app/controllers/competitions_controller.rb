@@ -25,13 +25,16 @@ class CompetitionsController < ApplicationController
     render :show
   end
 
-  # def edit
-  #   @competition = Competition.find(params[:id])
-  # end
+  def edit
+    @competition = Competition.find(params[:id])
+  end
 
-  # def update
+  def update
 
-  # end
+    @competition = Competition.find(params[:id])
+    @competition.update_attributes(competition_params)
+    redirect_to competition_path(@competition)
+  end
 
 
   private

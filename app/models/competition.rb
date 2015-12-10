@@ -7,7 +7,7 @@ class Competition < ActiveRecord::Base
   has_many :tags, through: :taggings
 
   def self.tagged_with(name)
-    Tag.find_by_name(name).competitions
+    Tag.find_by_name!(name).competitions
   end
 
   def tag_list
