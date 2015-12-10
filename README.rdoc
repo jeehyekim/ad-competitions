@@ -11,6 +11,14 @@ This is a Ruby application using the Rails framework.
 
 *  am Ian, an Illustrator. I heard about AComp Tracker through an illustrator friend. I visit the site, search through the database, and decide to sign up as a user. Once signed up, I am redirected to my profile page where I am given a brief tour. After searching through competitions, I can easily add ones I'm interested in to my profile. From my profile, I can see the names of the competitions I selected and see the dates on the calendar. I like the calendar because it shows me three consecutive months and highlights the various dates for each competition. Early bird entry, work submission, competition deadline, and winner notification dates are all marked with different colors to make it easy to see.
 
+== Wireframes
+
+
+
+== Schema Drawings
+
+
+
 
 == With more time...
 1. Make it a more expanded app more tailored to freelance designers and artists. Add ability to keep track of key contacts, a monthly and annual checklist of things they need to do to keep their freelance business running.

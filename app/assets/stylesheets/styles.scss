@@ -7,8 +7,9 @@ section {
   height: 100vh;
 }
 
-h1 {
-  margin: 50px;
+h1, #show-title {
+  margin-top: 100px;
+  margin-bottom: 50px;
   font-family: 'Yeseva One', cursive;
 }
 
@@ -16,7 +17,113 @@ h3 {
   font-family: 'Yeseva One', cursive;
 }
 
+h3 a {
+  color: black;
+  text-decoration: none;
+}
+
+h3 a:hover {
+  color:blue;
+  text-decoration: none;
+}
+
 p {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 16px;
 }
+
+.card {
+  margin-right: 15px;
+}
+
+// Navbar
+
+#navbar-brand {
+  font-size: 14px;
+}
+
+
+// Comepetition Show Page
+#show-image {
+  width: 100%;
+}
+
+#comp-details {
+  margin-top: 20px;
+}
+
+#comp-website {
+  color: black;
+  text-decoration: none;
+}
+
+#comp-website:hover {
+  color: blue;
+  text-decoration: none;
+}
+
+small {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+}
+
+
+// New Competition Form
+
+.form-control {
+  border-radius: 0px !important;
+}
+
+input, textarea {
+  color:black;
+  font-size: 16px;
+  border: 1px solid lightgray;
+  box-shadow: none !important;
+} 
+
+input::-webkit-input-placeholder {
+  color: black !important;
+}
+
+input::-moz-placeholder {
+  color: black !important;
+}
+input:-moz-placeholder {   /* Older versions of Firefox */
+  color: black !important;
+}
+input:-ms-input-placeholder { 
+  color: black !important;
+}
+
+textarea::-webkit-input-placeholder {
+  color: black !important;
+}
+
+textarea::-moz-placeholder {
+  color: black !important;
+}
+textarea:-moz-placeholder {   /* Older versions of Firefox */
+  color: black !important;
+}
+textarea:-ms-textarea-placeholder { 
+  color: black !important;
+}
+
+input[placeholder], textarea[placeholder] {
+   font-weight: bold; 
+   color:black !important;
+   font-family: 'Yeseva One', cursive;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
