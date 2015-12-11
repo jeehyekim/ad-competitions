@@ -62,9 +62,23 @@ p {
   text-decoration: none;
 }
 
-small {
+#comp-edit, #comp-delete {
+  color: white;
+  background: black;
+}
+
+
+
+small a {
   font-family: 'Oswald', sans-serif;
   font-weight: 400;
+  text-decoration: none;
+  color:black;
+}
+
+small a:hover {
+  text-decoration: none;
+  color:blue;
 }
 
 

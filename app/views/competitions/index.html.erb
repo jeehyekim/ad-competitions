@@ -11,7 +11,8 @@
           <div class="card-block">
             <small><%= raw tag_links(competition.all_tags) %></small>
             <p><%= truncate(competition.description, :length => 200) %></p>
-            <%= link_to "Edit", edit_competition_path(competition) %>
+            <%= link_to "Edit", edit_competition_path(competition), id: "comp-edit"%>
+            <%= link_to "Delete", competition_path(competition), method: :delete, id: "comp-delete"%>
           </div>
       </div>  
     <% end %>
