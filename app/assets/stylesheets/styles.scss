@@ -3,8 +3,12 @@
 // font-family: 'Josefin Sans', sans-serif;300, 400, 600
 
 
-section {
-  height: 100vh;
+// section {
+//   height: 80vh;
+// }
+
+html, body {
+  height: 100%;
 }
 
 h1, #show-title {
@@ -17,12 +21,30 @@ h3, h4 {
   font-family: 'Yeseva One', cursive;
 }
 
+h4 {
+  margin:5px;
+}
+
 h3 a {
   color: black;
   text-decoration: none;
 }
 
 h3 a:hover {
+  color:blue;
+  text-decoration: none;
+}
+
+h6 {
+  margin: 5px;
+}
+
+h6 a {
+  color: black;
+  text-decoration: none;
+}
+
+h6 a:hover {
   color:blue;
   text-decoration: none;
 }
@@ -40,8 +62,35 @@ p {
 
 #navbar-brand {
   font-size: 14px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
 }
 
+.nav-item {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  list-style-type: none;
+  margin-top: 15px;
+  margin-right: 15px;
+}
+
+.nav-item a {
+  color:black;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  background-color: none;
+  color:blue;
+}
+
+
+// Footer
+#footer {
+  height: 50px;
+  clear:both;
+  padding-top: 30px;
+}
 
 // Comepetition Show Page
 #show-image {
@@ -139,7 +188,6 @@ input[placeholder], textarea[placeholder] {
 // User Show Page
 
 #profile-image {
-  // margin-left: 50%;
 }
 
 #user-header {
