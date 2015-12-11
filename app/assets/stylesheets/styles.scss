@@ -13,7 +13,7 @@ h1, #show-title {
   font-family: 'Yeseva One', cursive;
 }
 
-h3 {
+h3, h4 {
   font-family: 'Yeseva One', cursive;
 }
 
@@ -66,8 +66,6 @@ p {
   color: white;
   background: black;
 }
-
-
 
 small a {
   font-family: 'Oswald', sans-serif;
@@ -135,9 +133,18 @@ input[placeholder], textarea[placeholder] {
    font-family: 'Yeseva One', cursive;
 }
 
+// User New Page
 
 
+// User Show Page
 
+#profile-image {
+  // margin-left: 50%;
+}
+
+#user-header {
+  margin-top: 100px;
+}
 
 
 
