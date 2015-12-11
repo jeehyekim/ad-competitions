@@ -76,6 +76,12 @@ small a {
   color:black;
 }
 
+small {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  margin-right: 10px;
+}
+
 small a:hover {
   text-decoration: none;
   color:blue;

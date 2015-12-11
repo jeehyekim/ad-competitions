@@ -1,6 +1,6 @@
 = AD Competitions
 
-##About
+== About
 In order to find art and design competitions, artists and designers usually have to peruse multiple sites to find information about the competitions they may be interested in submitting work to. Once they find this information, usually they need to keep track of them separately by manually entering it into their calendars or planners. AComp Tracker streamlines this process by allowing users to search through the database of current international competitions, add them to their profiles, and visually keep track of dates - entry and fee deadlines, when they need to submit work by, and when they will receive notification of the competition results.
 
 This is a Ruby application using the Rails framework.
