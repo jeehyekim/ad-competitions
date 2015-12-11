@@ -1,25 +1,40 @@
 <div class="container">
   <nav class="navbar navbar-light  navbar-fixed-top">
     <a href="/" class="navbar-brand" id="navbar-brand">AD Competitions</a>
-    <ul class="nav navbar-nav">
-      <li class="nav-item dropdown">
+    <!-- <ul class="nav navbar-nav"> -->
+      <li class="nav-item dropdown pull-left">
           <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Browse by Category</a>
           <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Graphic Design</a>
-            <a class="dropdown-item" href="#">Architecture</a>
-            <a class="dropdown-item" href="#">Interior Design</a>
-            <a class="dropdown-item" href="#">Illlustration</a>
-            <a class="dropdown-item" href="#">Fashion</a>
+            <a class="dropdown-item" href="/category/graphic">Graphic Design</a>
+            <a class="dropdown-item" href="/category/architecture">Architecture</a>
+            <a class="dropdown-item" href="/category/illustration">Illlustration</a>
+            <a class="dropdown-item" href="/category/fashion">Fashion</a>
         </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Features</a>
-      </li>
-      <li class="nav-item">
+    <!--   <li class="nav-item">
         <a class="nav-link" href="#">Pricing</a>
+      </li> -->
+      <li class="nav-item pull-right">
+        <a class="nav-link" href="/competitions/new">Logout</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">About</a>
+      <li class="nav-item pull-right">
+        <%= link_to "Login", class:"pull-right" %>
       </li>
-    </ul>
+      <li class="nav-item pull-right">
+        <%= link_to "Sign Up", new_user_path, class:"pull-right" %>
+      </li>
+      <li class="nav-item pull-right">
+        <a class="nav-link" href="/competitions/new"><i class="ion-plus-circled"></i></a>
+      </li>
+    
+
+    <% if user_signed_in? %>
+      <li class="nav-item dropdown pull-right">
+          <a class="nav-link dropdown-toggle " data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Settings</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Edit Profile</a>
+            <a class="dropdown-item" href="#">Logout</a>
+        </li>
+      <% end %>
+    <!-- </ul> -->
   </nav>  
 </div>
