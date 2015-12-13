@@ -9,6 +9,7 @@
             <a class="dropdown-item" href="/category/architecture">Architecture</a>
             <a class="dropdown-item" href="/category/illustration">Illlustration</a>
             <a class="dropdown-item" href="/category/fashion">Fashion</a>
+          </div>
         </li>
     <!--   <li class="nav-item">
         <a class="nav-link" href="#">Pricing</a>
@@ -16,23 +17,28 @@
       <li class="nav-item pull-right">
         <!-- <a class="nav-link" href="/competitions/new">Logout</a> -->
       </li>
-      <li class="nav-item pull-right">
-        <%= link_to "Login", class:"pull-right" %>
-      </li>
-      <li class="nav-item pull-right">
-        <%= link_to "Sign Up", new_user_path, class:"pull-right" %>
-      </li>
-      <li class="nav-item pull-right">
-        <a class="nav-link" href="/competitions/new"><i class="ion-plus-circled"></i></a>
-      </li>
-    
 
-      <li class="nav-item dropdown pull-right">
+      <% if logged_in? %>
+        <li class="nav-item pull-right">
+          <i class="ion-plus-circled"><%= link_to new_competition_path %></i>
+        </li>
+        <li class="nav-item dropdown pull-right">
           <a class="nav-link dropdown-toggle " data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Settings</a>
           <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Edit Profile</a>
-            <a class="dropdown-item" href="#">Logout</a>
+            <%= link_to "Profile", user_path(@user) %>
+            <%= link_to "Logout", logout_path, method: :delete %>
+          </div>
         </li>
+      <% else %>
+        <li class="nav-item pull-right">
+          <%= link_to "Login", login_path class:"pull-right" %>
+        </li>
+        <li class="nav-item pull-right">
+          <%= link_to "Sign Up", signup_path, class:"pull-right" %>
+        </li>
+        
+      <% end %>
+    
     <!-- </ul> -->
   </nav>  
 </div>

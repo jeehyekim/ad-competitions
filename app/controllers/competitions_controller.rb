@@ -46,6 +46,10 @@ class CompetitionsController < ApplicationController
     redirect_to competitions_path
   end
 
+  # def suggestion
+  #   render :newcompetition
+  # end
+
 
   private
 
