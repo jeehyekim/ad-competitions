@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   get'category/:tag', to: 'categories#index', as: "tag"
 
+  resources :commitments, only: [:new, :create]
+
   resources :competitions, only: [:index, :new, :create, :show, :edit, :update, :destroy, :newcompetition]
 
   resources :users, only: [:create, :show, :edit, :update]
