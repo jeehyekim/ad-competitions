@@ -9,6 +9,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
+      UserMailer.registration_confirmation(@user).deliver_now
       session[:user_id] = @user.id
       redirect_to @user
     else
@@ -18,6 +19,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @commitments = Commitment.where(user_id: @user_id)
     render :show
   end
 

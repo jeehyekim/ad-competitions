@@ -8,11 +8,13 @@
     <% end %>
     <h4 class="text-center">Welcome, <%= @user.name %></h4>
     <h6><%= link_to "Edit Profile", edit_user_path(@user) %></h6>
+    <h6>Joined: <%= time_ago_in_words(@user.created_at) %></h6>
   </div>
 
-  <div class="col-sm-4" id="user-comp-show">
-    <p><small>Email: </small><%= @user.email %></p>
-    <p><small>Joined:</small> <%= time_ago_in_words(@user.created_at) %> ago</p>
+  <div class="col-sm-4" id="user-commits">
+   <% @commitments.each do |commitment| %>
+    <h5><%= link_to commitment.competition.title, competition_path(commitment.competition) %></h5>
+   <% end %>
     
   </div>
 
