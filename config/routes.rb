@@ -6,7 +6,8 @@ Rails.application.routes.draw do
 
   resources :competitions, only: [:index, :new, :create, :show, :edit, :update, :destroy, :newcompetition]
 
-  resources :users, only: [:create, :show, :edit]
+  resources :users, only: [:create, :show, :edit, :update]
+  
   get 'signup', to: 'users#new'
   # resources :sessions, only: [:new, :create, :destroy]
 
