@@ -8,18 +8,18 @@ class SessionsController < ApplicationController
   end
 
   def create
-    @user = User.find_by(email: user_params[:email])
+    @user = User.find_by_email(user_params[:email])
     # if User.confirm(params[:email], params[:password])
-    if @user.authenticate(user_params[:password])
+    # if @user.authenticate(user_params[:password])
       #save the user's id into the session
       session[:user_id] = @user.id
       #redirect to the show page
       redirect_to user_path(@user.id)
-    else
+    # else
       # show errors
       # @sessions_error = flash[:error] = "Username or password incorrect"
-      redirect_to new_session_path
-    end
+      # redirect_to new_session_path
+    # end
   end
 
   def destroy
@@ -29,6 +29,6 @@ class SessionsController < ApplicationController
 
 private
   def user_params
-    user_params = params.require(:user).permit(:email, :password_digest)
+    user_params = params.require(:user).permit(:email, :password)
   end
 end
