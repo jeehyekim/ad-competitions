@@ -7,15 +7,24 @@ class UsersController < ApplicationController
 
   def create 
     @user = User.new(user_params)
-
+    
     if @user.save
-      UserMailer.registration_confirmation(@user).deliver_now
+      UserMailer.welcome_email(@user).deliver_now
       session[:user_id] = @user.id
       redirect_to @user
     else
       render :new
     end
   end
+
+  # def competitions
+  #   @user = User.find(params[:id])
+  #   @competition = Competition.find(params[:id])
+  #   @competition.user_id = @user.id
+  #   @user.competitions << @competition
+  #   flash[:notice] = "Competition saved!"
+  #   redirect_to competition_path(@competition)
+  # end
 
   def show
     @user = User.find(params[:id])

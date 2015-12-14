@@ -24,8 +24,19 @@ class CompetitionsController < ApplicationController
     end
   end
 
+  # def addtouser
+  #   @competition = Competition.find(params[:id])
+  #   @user = User.find(params[:id])
+  #   @competition.competition_id = @competition.id
+  #   @competition.user_id = @user.id
+  #   @user.competitions << @competition
+  #   flash[:notice] = "Competition saved!"
+  #   redirect_to competition_path(@competition)
+  # end
+
   def show
     @competition = Competition.find(params[:id])
+    @user = current_user
     render :show
   end
 

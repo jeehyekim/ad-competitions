@@ -35,9 +35,19 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'rails_12factor', group: :production
 
+# used for competition suggestion form
+gem 'mail_form'
+gem 'simple_form'
+
+# to interface with mailchimp
+gem 'gibbon'
+
+gem 'dotenv-rails', :groups => [:development, :test]
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'better_errors'
 end
 
 group :development do
