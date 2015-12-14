@@ -1,6 +1,6 @@
 <section>
-<div class="col-sm-10 col-sm-offset-1 col-xs-12" id="user-header">
-  <div class="text-center">
+<div class="col-sm-10 col-sm-offset-1 col-xs-12">
+  <div class="text-center" id="user-header">
     <% if @user.image == nil %>
       <img src="//placehold.it/200" class="avatar img-circle text-center" alt="avatar" style="height:100px" id="profile-image">
     <% else %>
@@ -11,16 +11,27 @@
     <h6>Joined: <%= time_ago_in_words(@user.created_at) %></h6>
   </div>
 
-  <div class="col-sm-4" id="user-commits">
-   <% @user.competitions.each do |competition| %>
-    <h5><%= link_to competition.title, competition_path(competition) %></h5>
-   <% end %>
+  <div class="col-sm-4 col-sm-offset-1" id="user-commits">
+    <h4 class="text-center">Saved Competitions</h4>
+    <hr>
+    <div id="user-comp-details">
+      <% @user.competitions.each do |competition| %>
+        <h4><%= link_to competition.title, competition_path(competition) %></h4>
+        <p><small> Category: <%= raw tag_links(competition.all_tags) %></small><br>
+        <span id="user-dates">Early Bird Deadline: </span><%= competition.early_bird %><br>
+        <span id="user-dates">Final Deadline: </span><%= competition.deadline %><br>
+        <span id="user-dates">Notifications: </span><%= competition.notifiction %></p><hr>
+      <% end %>
+    </div>
     
   </div>
 
-  <div class="col-sm-5" id="user-deadlines">
-      <p id="comp-desc"></p>
+  <div class="col-sm-5 col-sm-offset-1" id="user-deadlines">
+    <h4 class="text-center">Upcoming Deadlines</h4>
+    <hr>
+    <div class="user-deadline-dates">
+     
+    </div>
   </div>
-
 </div>
 </section>

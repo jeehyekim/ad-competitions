@@ -17,7 +17,7 @@ h1, .show-title {
   font-family: 'Yeseva One', cursive;
 }
 
-h3, h4 {
+h3, h4, h5 {
   font-family: 'Yeseva One', cursive;
 }
 
@@ -31,6 +31,16 @@ h3 a {
 }
 
 h3 a:hover {
+  color:blue;
+  text-decoration: none;
+}
+
+h4 a {
+  color: black;
+  text-decoration: none;
+}
+
+h4 a:hover {
   color:blue;
   text-decoration: none;
 }
@@ -199,6 +209,18 @@ input[placeholder], textarea[placeholder] {
   margin-top: 100px;
 }
 
+#user-commits, #user-deadlines {
+  margin-top: 30px;
+}
+
+#user-comp-details p {
+  margin-left: 10px;
+}
+
+#user-dates {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 600;
+}
 
 
 

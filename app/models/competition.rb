@@ -4,6 +4,8 @@ class Competition < ActiveRecord::Base
   has_many :users, through: :commitments
   has_many :taggings
   has_many :tags, through: :taggings
+  has_many :deadlines, dependent: :destroy
+  has_many :users, through: :deadlines
 
   def all_tags=(names)
     self.tags = names.split(',').map do |name|
