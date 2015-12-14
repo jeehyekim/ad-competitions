@@ -3,7 +3,7 @@
 <section>
 <div class="col-sm-10 col-sm-offset-1 col-xs-12">
 
-<h3 class="text-center" id="show-title"><%= @competition.title %></h3>
+<h3 class="text-center show-title" id="<%= @competition.id %>"><%= @competition.title %></h3>
   <div class="col-sm-6 col-sm-offset-3">
       <img src="<%= @competition.image_url %>" id="show-image">
   </div>
@@ -16,7 +16,7 @@
       <p id="comp-desc"><%= simple_format(@competition.description) %></p>
   </div>
   <div id="new-comp-btn">
-    <button><span class="glyphicon glyphicon-plus-sign"></span></button>
+    <button><span class="glyphicon glyphicon-plus-sign" id="saveToUser"></span></button>
   </div>
 </div>
 </section>
