@@ -11,7 +11,7 @@ html, body {
   // height: 80%;
 }
 
-h1, #show-title {
+h1, .show-title {
   margin-top: 100px;
   margin-bottom: 50px;
   font-family: 'Yeseva One', cursive;
@@ -132,6 +132,11 @@ small {
 small a:hover {
   text-decoration: none;
   color:blue;
+}
+
+// Competition Suggest Form
+#comp-suggest-form {
+  margin-top: 50px;
 }
 
 

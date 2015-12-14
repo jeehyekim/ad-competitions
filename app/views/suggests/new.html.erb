@@ -1,18 +1,31 @@
-<div align="center">
-  <h3>Suggest a Competition</h3>
-
-  <h5>Can't find a specific competition? Submit some brief information about it and we'll get back to you!</h5>
-
-  <%= simple_form_for @suggest do |f| %>
-    <%= f.input :name, :required => true %>
-    <%= f.input :email, :required => true %>
-    <%= f.input :title, :required => true %>
-    <%= f.input :website, :required => true %>
-    <%= f.input :message, :as => :text, :required => true %>
-
-    <div>
-      </br>
-      <%= f.button :submit, 'Send message', :class=> "btn btn-primary" %>
-    </div>
-  <% end %>
+<div class="col-sm-8 col-sm-offset-2">
+  <h1 class="text-center">Suggest a Competition</h1>
+  <h5 class="text-center">Can't find a specific competition? Submit some brief information about it and we'll get back to you!</h5>
 </div>
+
+  <div class="col-sm-8 col-sm-offset-2" id="comp-suggest-form">
+    <%= form_for @suggest do |f| %>
+    <form>
+      <fieldset class="form-group">
+        <%= f.text_field :name, :required => true, placeholder: "Name", class: "form-control" %>
+      </fieldset>
+      <fieldset class="form-group">
+        <%= f.text_field :email, :required => true, placeholder: "Email", class: "form-control" %>
+      </fieldset>
+      <fieldset class="form-group">
+        <%= f.text_field :title, :required => true, placeholder: "Competition Title", class: "form-control" %>
+      </fieldset>
+      <fieldset class="form-group">
+        <%= f.text_field :website, :required => true, placeholder: "Website", class: "form-control" %>
+        </fieldset>
+      <fieldset class="form-group">
+        <%= f.text_area :message, :as => :text, :required => true, placeholder: "Message", class: "form-control" %>
+      </fieldset>
+
+        <%= f.submit 'Send message', :class=> "btn" %>
+    </form>
+    <% end %>
+  </div>
+
+
+

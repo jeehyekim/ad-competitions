@@ -12,8 +12,8 @@
   </div>
 
   <div class="col-sm-4" id="user-commits">
-   <% @commitments.each do |commitment| %>
-    <h5><%= link_to commitment.competition.title, competition_path(commitment.competition) %></h5>
+   <% @user.competitions.each do |competition| %>
+    <h5><%= link_to competition.title, competition_path(competition) %></h5>
    <% end %>
     
   </div>

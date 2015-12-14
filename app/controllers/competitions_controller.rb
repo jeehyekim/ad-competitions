@@ -36,7 +36,7 @@ class CompetitionsController < ApplicationController
 
   def show
     @competition = Competition.find(params[:id])
-    @user = current_user
+    @user = User.find(current_user)
     render :show
   end
 
@@ -67,5 +67,9 @@ class CompetitionsController < ApplicationController
   def competition_params
     params.require(:competition).permit(:title, :description, :website, :image_url, :early_bird, :deadline, :notification, :all_tags)
   end
+
+  # def user_params
+  #   params.require(:user).permit(:name, :email, :password_digest)
+  # end
 
 end

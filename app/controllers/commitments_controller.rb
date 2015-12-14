@@ -9,6 +9,11 @@ class CommitmentsController < ApplicationController
     if @commitment.save
       # flash success message
       p @commitment
+      if request.xhr?
+        render :json => {
+          :commitment => @commitment
+        }
+      end
     else
       redirect_to user_path
     end
