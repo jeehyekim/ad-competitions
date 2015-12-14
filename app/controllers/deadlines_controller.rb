@@ -9,11 +9,13 @@ class DeadlinesController < ApplicationController
     if @deadline.save
       # flash success message
       p @deadline
-      # if request.xhr?
-      #   render :json => {
-      #     :deadline => @deadline
-      #   }
-      # end
+
+      if request.xhr?
+        render :json => {
+          :deadline => @deadline
+        }
+      end
+
     else
       redirect_to user_path
     end

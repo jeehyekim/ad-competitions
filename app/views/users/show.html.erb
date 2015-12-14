@@ -14,24 +14,26 @@
   <div class="col-sm-4 col-sm-offset-1" id="user-commits">
     <h4 class="text-center">Saved Competitions</h4>
     <hr>
-    <div id="user-comp-details">
-      <% @user.competitions.each do |competition| %>
-        <h4><%= link_to competition.title, competition_path(competition) %></h4>
-        <p><small> Category: <%= raw tag_links(competition.all_tags) %></small><br>
-        <span id="user-dates">Early Bird Deadline: </span><%= competition.early_bird %><br>
-        <span id="user-dates">Final Deadline: </span><%= competition.deadline %><br>
-        <span id="user-dates">Notifications: </span><%= competition.notifiction %></p><hr>
-      <% end %>
-    </div>
-    
+
+      <div id="user-comp-details">
+        <% @user.competitions.each do |competition| %>
+          <h4><%= link_to competition.title, competition_path(competition) %></h4>
+          <p><small> Category: <%= raw tag_links(competition.all_tags) %></small><br>
+          <span id="user-dates">Early Bird Deadline: </span><%= competition.early_bird %><br>
+          <span id="user-dates">Final Deadline: </span><%= competition.deadline %><br>
+          <span id="user-dates">Notifications: </span><%= competition.notifiction %></p><hr>
+        <% end %>
+     </div>
   </div>
 
-  <div class="col-sm-5 col-sm-offset-1" id="user-deadlines">
-    <h4 class="text-center">Upcoming Deadlines</h4>
-    <hr>
-    <div class="user-deadline-dates">
-     
+  
+    <div class="col-sm-5 col-sm-offset-1" id="user-deadlines">
+      <h4 class="text-center">Upcoming Deadlines</h4>
+      <hr>
+      <div class="user-deadline-dates">
+      
+     </div>
     </div>
-  </div>
+
 </div>
 </section>

@@ -47,10 +47,7 @@ class CompetitionsController < ApplicationController
     redirect_to competitions_path
   end
 
-  # def suggestion
-  #   render :newcompetition
-  # end
-
+ 
 
   private
 
@@ -58,8 +55,8 @@ class CompetitionsController < ApplicationController
     params.require(:competition).permit(:title, :description, :website, :image_url, :early_bird, :deadline, :notification, :all_tags)
   end
 
-  # def user_params
-  #   params.require(:user).permit(:name, :email, :password_digest)
-  # end
+  def user_params
+    params.require(:user).permit(:name, :email, :password_digest)
+  end
 
 end
