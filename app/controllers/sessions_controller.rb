@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
   end
 
   def create
-    @user = User.find_by_email(email: user_params[:email])
+    @user = User.find_by_email(user_params[:email])
     # if User.confirm(params[:email], params[:password])
     if @user.authenticate(user_params[:password])
       #save the user's id into the session
