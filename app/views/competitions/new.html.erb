@@ -9,10 +9,19 @@
       <%= f.text_field :title, placeholder: "Title", class: "form-control" %>
     </fieldset>
     <fieldset class="form-group">
-      <%= f.text_area :description, placeholder: "Description", size:"4x15", class: "form-control" %>
+      <%= f.text_field :website, placeholder: "Website URL", class: "form-control" %>
     </fieldset>
     <fieldset class="form-group">
-      <%= f.text_field :website, placeholder: "Website URL", class: "form-control" %>
+      <%= f.date_field :early_bird, placeholder: "Early Bird Deadline", class: "form-control" %>
+    </fieldset>
+    <fieldset class="form-group">
+      <%= f.date_field :deadline, placeholder: "Final Deadline", class: "form-control" %>
+    </fieldset>
+    <fieldset class="form-group">
+      <%= f.date_field :notifiction, placeholder: "Notification", class: "form-control" %>
+    </fieldset>
+    <fieldset class="form-group">
+      <%= f.text_area :description, placeholder: "Description", size:"4x15", class: "form-control" %>
     </fieldset>
     <fieldset class="form-group">
       <%= f.text_field :image_url, placeholder: "Image URL", class: "form-control" %>
