@@ -10,9 +10,9 @@
     
     <a href="<%= @competition.website %>" id="comp-website"><small>Visit Website</small></a><br>
     <p><small> Category: <%= raw tag_links(@competition.all_tags) %></small><br><hr>
-    <span id="user-dates">Early Bird Deadline: </span><%= @competition.early_bird %><br>
-    <span id="user-dates">Final Deadline: </span><%= @competition.deadline %><br>
-    <span id="user-dates">Notifications: </span><%= @competition.notifiction %></p>
+    <span id="user-early-reg" data-early-reg='<%= @competition.early_bird %>'>Early Bird Deadline: </span><%= @competition.early_bird %><br>
+    <span id="user-deadline" data-deadline='<%= @competition.deadline %>'>Final Deadline: </span><%= @competition.deadline %><br>
+    <span id="user-notification" data-notification='<%= @competition.notifiction %>'>Notifications: </span><%= @competition.notifiction %></p>
   </div>
   <div class="col-sm-5 " id="comp-details">
       <p id="comp-desc"><%= simple_format(@competition.description) %></p>

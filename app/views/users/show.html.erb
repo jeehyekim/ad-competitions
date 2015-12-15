@@ -32,7 +32,9 @@
       <hr>
       <div class="user-deadline-dates">
       <% @user.deadlines.each do |deadline| %>
-        <h4><%= deadline.competition.title%></h4>
+        <h4><%= deadline[0].competition.title%></h4>
+        <h4><%= deadline[0].date%></h4>
+        <h4><%= deadline[0].kind%></h4>
       <% end %>
      </div>
     </div>

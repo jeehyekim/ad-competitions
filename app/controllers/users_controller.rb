@@ -10,7 +10,7 @@ class UsersController < ApplicationController
     
     
     if user_params[:email] === "art.design.competitions@gmail.com"
-      user_params[:admin] = true
+      @user.admin = true
     end
       
     if @user.save
@@ -24,9 +24,6 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(current_user.id)
-    render :show
-
-    @deadlines = @user.deadlines.all
   end
 
   def edit

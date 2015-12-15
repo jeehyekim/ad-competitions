@@ -8,6 +8,9 @@ class CommitmentsController < ApplicationController
     @commitment = Commitment.create(:user_id => current_user.id, :competition_id => params[:competition_id])
     if @commitment.save
       # flash success message
+
+      # add deadlines to user
+      
       p @commitment
       if request.xhr?
         render :json => {
