@@ -10,7 +10,7 @@ class UsersController < ApplicationController
     
     
     if @user.save
-      if @user.email === "miss.jeehye@gmail.com"
+      if @user.email === "art.design.competitions@gmail.com"
         @user.update_attribute(:admin, TRUE)
       end
       UserMailer.welcome_email(@user).deliver_now
