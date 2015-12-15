@@ -19,9 +19,15 @@
         <% @user.competitions.each do |competition| %>
           <h4><%= link_to competition.title, competition_path(competition) %></h4>
           <p><small> Category: <%= raw tag_links(competition.all_tags) %></small><br>
-          <span id="user-dates">Early Bird Deadline: </span><%= competition.early_bird %><br>
-          <span id="user-dates">Final Deadline: </span><%= competition.deadline %><br>
-          <span id="user-dates">Notifications: </span><%= competition.notifiction %></p><hr>
+          <% if !competition.early_bird.nil? %>
+            <span id="user-dates">Early Bird Deadline: </span><%= competition.early_bird.to_date.strftime("%m/%d/%Y") %><br>
+          <% end %>
+          <% if !competition.deadline.nil? %>
+            <span id="user-dates">Final Deadline: </span><%= competition.deadline.to_date.strftime("%m/%d/%Y") %><br>
+          <% end %>
+          <% if !competition.notifiction.nil? %>
+            <span id="user-dates">Notifications: </span><%= competition.notifiction.to_date.strftime("%m/%d/%Y") %></p><hr>
+          <% end %>
         <% end %>
      </div>
   </div>
@@ -31,11 +37,12 @@
       <h4 class="text-center">Upcoming Dates</h4>
       <hr>
       <div class="user-deadline-dates">
-      <% @user.deadlines.each do |deadline| %>
-        <h4><%= deadline[0].competition.title %></h4>
-        <h4><%= deadline[0].date.strftime('%m/%d/%Y') %></h4>
-        <h4><%= deadline[0].kind %></h4>
-        <hr>
+      <% @user.deadlines.flatten.each do |deadline| %>
+        <% if !deadline.date.nil? %>
+          <h4><%= deadline.competition.title %></h4>
+            <p><small><%= deadline.kind %></small><%= deadline.date.to_date.strftime("%m/%d/%Y") %></>
+          <hr>
+        <% end %>
       <% end %>
      </div>
     </div>
