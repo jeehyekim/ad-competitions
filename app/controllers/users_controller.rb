@@ -10,8 +10,8 @@ class UsersController < ApplicationController
     
     
     if @user.save
-      if @user.email === "art.design.competitions@gmail.com"
-        @user.update_attribute(:admin, TRUE)
+      if user_params[:email] === "art.design.competitions@gmail.com"
+        user_params[:admin] = true
       end
       UserMailer.welcome_email(@user).deliver_now
       session[:user_id] = @user.id

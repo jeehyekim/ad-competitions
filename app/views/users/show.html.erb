@@ -31,7 +31,9 @@
       <h4 class="text-center">Upcoming Deadlines</h4>
       <hr>
       <div class="user-deadline-dates">
-      
+      <% @user.deadlines.each do |deadline| %>
+        <h4><%= deadline.competition.title%></h4>
+      <% end %>
      </div>
     </div>
 

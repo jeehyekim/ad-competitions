@@ -7,16 +7,21 @@
       <img src="<%= @competition.image_url %>" id="show-image">
   </div>
   <div class="col-sm-4 col-sm-offset-2" id="comp-details">
-    <small>Website:</small>
-    <a href="<%= @competition.website %>" id="comp-website"><%= @competition.website %></a><br>
-    <small>Category:</small><span><%= @competition.all_tags %></span>
+    
+    <a href="<%= @competition.website %>" id="comp-website"><small>Visit Website</small></a><br>
+    <p><small> Category: <%= raw tag_links(@competition.all_tags) %></small><br><hr>
+    <span id="user-dates">Early Bird Deadline: </span><%= @competition.early_bird %><br>
+    <span id="user-dates">Final Deadline: </span><%= @competition.deadline %><br>
+    <span id="user-dates">Notifications: </span><%= @competition.notifiction %></p>
   </div>
   <div class="col-sm-5 " id="comp-details">
       <p id="comp-desc"><%= simple_format(@competition.description) %></p>
   </div>
+
   <div id="new-comp-btn">
     <button><span class="glyphicon glyphicon-plus-sign" id="saveToUser"></span></button>
   </div>
+  
 </div>
 <p class='current_user' id='<%= current_user.id %>' style='display:none'></p>
 </section>
