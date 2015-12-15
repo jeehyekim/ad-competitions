@@ -24,11 +24,9 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(current_user.id)
-    p @user.inspect
-    p @user.commitments
-    p @user.competitions
-    # @commitments = Commitment.where(user_id: @user_id)
     render :show
+
+    @deadlines = @user.deadlines.all
   end
 
   def edit
