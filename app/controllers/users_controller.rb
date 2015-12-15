@@ -9,10 +9,11 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     
     
+    if user_params[:email] === "art.design.competitions@gmail.com"
+      user_params[:admin] = true
+    end
+      
     if @user.save
-      if user_params[:email] === "art.design.competitions@gmail.com"
-        user_params[:admin] = true
-      end
       UserMailer.welcome_email(@user).deliver_now
       session[:user_id] = @user.id
       redirect_to @user
