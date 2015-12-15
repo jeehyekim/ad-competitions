@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151214211333) do
+ActiveRecord::Schema.define(version: 20151215203045) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,9 +27,9 @@ ActiveRecord::Schema.define(version: 20151214211333) do
     t.string   "title"
     t.text     "description"
     t.string   "website"
-    t.date     "early_bird"
-    t.date     "deadline"
-    t.date     "notifiction"
+    t.datetime "early_bird"
+    t.datetime "deadline"
+    t.datetime "notifiction"
     t.string   "image_url"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
@@ -40,6 +40,8 @@ ActiveRecord::Schema.define(version: 20151214211333) do
     t.datetime "updated_at",     null: false
     t.integer  "competition_id"
     t.integer  "user_id"
+    t.string   "kind"
+    t.datetime "date"
   end
 
   create_table "taggings", force: :cascade do |t|

@@ -21,10 +21,5 @@ class DeadlinesController < ApplicationController
     end
   end
 
-  def destroy
-    @deadline = Deadline.find(params[:id])
-    @deadline.destroy!
-    redirect_to user_path(current_user.id)
-  end
 
 end
