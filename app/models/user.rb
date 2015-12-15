@@ -23,7 +23,8 @@ class User < ActiveRecord::Base
         deadlines.push(c.deadlines)
       end
     end
-    deadlines.flatten.sort_by(&:date)
+    deadlines.flatten
+    deadlines.sort_by
     return deadlines
   end
 

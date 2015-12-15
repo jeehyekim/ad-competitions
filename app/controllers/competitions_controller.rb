@@ -20,7 +20,7 @@ class CompetitionsController < ApplicationController
     if @competition.save
       @competition.deadlines.create({kind:'early_bird', date: @competition.early_bird})
       @competition.deadlines.create({kind:'deadline', date: @competition.deadline})
-      @competition.deadlines.create({kind:'notification', date: @competition.notification})
+      @competition.deadlines.create({kind:'notification', date: @competition.notifiction})
       redirect_to competition_path(@competition)
     else
       render :new
