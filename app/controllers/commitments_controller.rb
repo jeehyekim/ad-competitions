@@ -5,7 +5,7 @@ class CommitmentsController < ApplicationController
   end
 
   def create
-    @commitment = Commitment.create(:user_id => params[:user_id], :competition_id => params[:competition_id])
+    @commitment = Commitment.create(:user_id => current_user.id, :competition_id => params[:competition_id])
     if @commitment.save
       # flash success message
       p @commitment

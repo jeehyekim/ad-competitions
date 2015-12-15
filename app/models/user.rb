@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
   has_many :commitments, dependent: :destroy
   has_many :competitions, through: :commitments
   has_many :deadlines
-  has_many :competitions, through: :deadlines
+  has_many :contests, through: :deadlines
 
 
   def self.confirm(params)

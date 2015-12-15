@@ -14,6 +14,8 @@ Rails.application.routes.draw do
 
   resources :commitments, only: [:new, :create]
 
+  resources :deadlines, only: [:new, :create]
+
   resources :competitions, only: [:index, :new, :create, :show, :edit, :update, :destroy]
 
   # resources :competitions do
