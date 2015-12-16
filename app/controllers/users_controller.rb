@@ -9,6 +9,7 @@ class UsersController < ApplicationController
     
     if user_params[:email] === "art.design.competitions@gmail.com"
       user_params.admin = true
+      
       @user = User.new(user_params)
     end
       
