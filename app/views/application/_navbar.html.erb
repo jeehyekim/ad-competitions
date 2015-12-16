@@ -27,7 +27,7 @@
             <%= link_to "Logout", logout_path, method: :delete, class: "dropdown-item" %>
           </div>
         </li>
-        <% if current_user.admin? %>
+        <% if current_user.admin %>
         <li class="nav-item pull-right">
           <a href="/competitions/new"><i class="ion-plus-circled"></i></a>
         </li>

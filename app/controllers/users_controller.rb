@@ -10,7 +10,6 @@ class UsersController < ApplicationController
     
     if @user.email === "art.design.competitions@gmail.com"
       @user.admin = true
-
     end
       
     if @user.save
