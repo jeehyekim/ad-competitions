@@ -28,7 +28,7 @@
 <div class="text-center">
   <h1><a href="/category/graphic">Graphic Design</a></h1>
   <div class="col-md-10 col-md-offset-2 col-sm-12">
-    <% if @competitions.tags? %>
+    <% if @competitions.tags %>
     <% @competitions.tagged_with('graphic').limit(3).each do |competition| %>
         <div class="card col-sm-3 col-sm-12">
           <div class="card-block">
@@ -53,6 +53,7 @@
   <!-- ILLUSTRATION -->
   <h1 class="text-center"><a href="/category/graphic">Illustration</a></h1>
   <div class="col-md-10 col-md-offset-2 col-sm-12">
+  <% if @competitions.tags %>
     <% @competitions.tagged_with('illustration').limit(3).each do |competition| %>
         <div class="card col-sm-3 col-sm-12">
           <div class="card-block">
@@ -68,6 +69,7 @@
               <% end %>
             </div>
         </div>
+    <% end %>
     <% end %>
   </div>
 <!-- </section> -->
