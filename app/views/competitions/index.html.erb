@@ -27,47 +27,30 @@
   <div class="text-center">
     <h1><a href="/category/graphic">Graphic Design</a></h1>
     <div class="col-md-10 col-md-offset-2 col-sm-12">
-      <% @competitions.tagged_with('graphic design').limit(3).each do |competition| %>
-          <div class="card col-sm-3 col-sm-12">
-            <div class="card-block">
-                <h3><%= link_to competition.title, competition_path(competition) %></h3>
-            </div>
-            <img src="<%= competition.image_url %>" alt="card-image" style="width: 100%">
+      <% @competitions.each do |competition| %>
+          
+            <div class="card col-sm-3 col-sm-12">
               <div class="card-block">
-                <small><%= raw tag_links(competition.all_tags) %></small>
-                <p><%= truncate(competition.description, :length => 200) %></p>
-                <% if current_user && current_user.admin? %>
-                  <%= link_to "Edit", edit_competition_path(competition), id: "comp-edit"%>
-                  <%= link_to "Delete", competition_path(competition), method: :delete, id: "comp-delete"%>
-                <% end %>
+                  <h3><%= link_to competition.title, competition_path(competition) %></h3>
               </div>
-          </div>
+              <img src="<%= competition.image_url %>" alt="card-image" style="width: 100%">
+                <div class="card-block">
+                  <small><%= raw tag_links(competition.all_tags) %></small>
+                  <p><%= truncate(competition.description, :length => 200) %></p>
+                  <% if current_user && current_user.admin? %>
+                    <%= link_to "Edit", edit_competition_path(competition), id: "comp-edit"%>
+                    <%= link_to "Delete", competition_path(competition), method: :delete, id: "comp-delete"%>
+                  <% end %>
+                </div>
+            </div>
+
       <% end %>
     </div>
   </div>
 
 
-    <!-- ILLUSTRATION -->
-    <h1 class="text-center"><a href="/category/graphic%20design">Illustration</a></h1>
-    <div class="col-md-10 col-md-offset-2 col-sm-12">
-      <% @competitions.tagged_with('illustration').limit(3).each do |competition| %>
-          <div class="card col-sm-3 col-sm-12">
-            <div class="card-block">
-                <h3><%= link_to competition.title, competition_path(competition) %></h3>
-            </div>
-            <img src="<%= competition.image_url %>" alt="card-image" style="width: 100%">
-              <div class="card-block">
-                <small><%= raw tag_links(competition.all_tags) %></small>
-                <p><%= truncate(competition.description, :length => 200) %></p>
-                <% if current_user && current_user.admin? %>
-                  <%= link_to "Edit", edit_competition_path(competition), id: "comp-edit"%>
-                  <%= link_to "Delete", competition_path(competition), method: :delete, id: "comp-delete"%>
-                <% end %>
-              </div>
-          </div>
-      <% end %>
-    </div>
+
+ 
 
 
 
-<!-- </section> -->

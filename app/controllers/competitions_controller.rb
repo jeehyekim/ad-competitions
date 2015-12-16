@@ -1,11 +1,11 @@
 class CompetitionsController < ApplicationController
 
   def index
-    # if params[:tag]
-    #   @competitions = Competition.tagged_with(params[:tag])
-    # else
+    if params[:tag]
+      @competitions = Competition.tagged_with(params[:tag])
+    else
       @competitions = Competition.all
-    # end
+    end
   end
 
   def new
