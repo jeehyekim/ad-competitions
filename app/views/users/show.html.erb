@@ -26,8 +26,9 @@
             <span id="user-dates">Final Deadline: </span><%= competition.deadline.to_date.strftime("%m/%d/%Y") %><br>
           <% end %>
           <% if !competition.notifiction.nil? %>
-            <span id="user-dates">Notifications: </span><%= competition.notifiction.to_date.strftime("%m/%d/%Y") %></p><hr>
+            <span id="user-dates">Notifications: </span><%= competition.notifiction.to_date.strftime("%m/%d/%Y") %></p>
           <% end %>
+            <hr>
         <% end %>
      </div>
   </div>

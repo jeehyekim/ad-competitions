@@ -10,8 +10,12 @@
     
     <a href="<%= @competition.website %>" id="comp-website"><small>Visit Website</small></a><br>
     <p><small> Category: <%= raw tag_links(@competition.all_tags) %></small><br><hr>
-    <span id="user-dates">Early Bird Deadline: </span><%= @competition.early_bird.to_date.strftime("%m/%d/%Y") %><br>
+    <% if !@competition.early_bird.nil? %>
+      <span id="user-dates">Early Bird Deadline: </span><%= @competition.early_bird.to_date.strftime("%m/%d/%Y") %><br>
+    <% end %>
+    <% if !@competition.deadline.nil? %>
     <span id="user-dates" data-deadline='<%= @competition.deadline %>'>Final Deadline: </span><%= @competition.deadline.to_date.strftime("%m/%d/%Y") %></p>
+    <% end %>
   </div>
 
 
