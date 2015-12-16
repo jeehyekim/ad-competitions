@@ -38,7 +38,7 @@
       <h4 class="text-center">Upcoming Dates</h4>
       <hr>
       <div class="user-deadline-dates">
-      <% @user.deadlines.flatten.each do |deadline| %>
+      <% @deadlines.each do |deadline| %>
         <% if !deadline.date.nil? %>
           <p><small><%= deadline.kind %></small><%= deadline.date.to_date.strftime("%m/%d/%Y") %></p>
           <h4><%= deadline.competition.title %></h4>
