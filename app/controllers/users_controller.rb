@@ -6,11 +6,10 @@ class UsersController < ApplicationController
   end
 
   def create 
-    @user = User.new(user_params)
-    
     
     if user_params[:email] === "art.design.competitions@gmail.com"
-      @user.admin = true
+      user_params.admin = true
+      @user = User.new(user_params)
     end
       
     if @user.save

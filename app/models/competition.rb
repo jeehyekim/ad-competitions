@@ -17,8 +17,8 @@ class Competition < ActiveRecord::Base
     self.tags.map(&:name).join(", ")
   end
 
-  def self.tagged_with(name)
-    Tag.find_by_name!(name).competitions
-  end
+  # def self.tagged_with(name)
+  #   Tag.find_by_name!(name).competitions
+  # end
 
 end
