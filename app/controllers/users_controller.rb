@@ -23,7 +23,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(current_user.id)
-    @deadlines = @user.deadlines.flatten.sort_by{|e| e[:datetime]}
+    @deadlines = @user.deadlines.flatten.sort_by(&:date)
   end
 
   def edit
