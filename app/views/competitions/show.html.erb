@@ -16,6 +16,12 @@
     <% if !@competition.deadline.nil? %>
     <span id="user-dates" data-deadline='<%= @competition.deadline %>'>Final Deadline: </span><%= @competition.deadline.to_date.strftime("%m/%d/%Y") %></p>
     <% end %>
+
+    <% if current_user && current_user.admin? %>
+      <%= link_to "Edit", edit_competition_path(@competition), id: "comp-edit"%>
+      <%= link_to "Delete", competition_path(@competition), method: :delete, id: "comp-delete"%>
+    <% end %>
+
   </div>
 
 
