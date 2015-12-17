@@ -9,20 +9,22 @@
 
 html, body {
   // height: 80%;
+  background-color: blue;
 }
 
-div {
-  margin-bottom: 100px;
-}
+// div {
+//   margin-bottom: 100px;
+// }
 
 h1, .show-title {
   margin-top: 100px;
   margin-bottom: 50px;
   font-family: 'Yeseva One', cursive;
+  color: white;
 }
 
 h1 a {
-  color: black;
+  color: white;
   text-decoration: none;
   margin-top: 50px;
 }
@@ -83,12 +85,14 @@ p {
   margin-right: 15px;
 }
 
+
 // Navbar
 
 #navbar-brand {
   font-size: 14px;
   font-family: 'Oswald', sans-serif;
   font-weight: 400;
+  color:white;
 }
 
 .nav-item {
@@ -100,18 +104,31 @@ p {
 }
 
 .nav-item a {
-  color:black;
+  color:white;
   text-decoration: none;
 }
 
 .nav-link:hover {
   background-color: none;
-  color:blue;
+  // color:blue;
 }
 
 .navbar-default {
-  background-color: white !important;
-  border-color: blue !important;
+  background-color: blue !important;
+  // border-color: white !important;
+}
+
+.dropdown-item {
+  color:black !important;
+}
+
+.dropdown-item:hover {
+  color:white !important;
+  background-color: blue;
+}
+
+.dropdown-menu {
+  border-radius: 0px !important;
 }
 
 // Footer
@@ -120,6 +137,16 @@ p {
   clear:both;
   padding-top: 30px;
 }
+
+
+
+// Index page
+#comp-row {
+  margin-bottom: 100px;
+}
+
+
+
 
 // Comepetition Show Page
 #show-image {
@@ -231,6 +258,8 @@ input[placeholder], textarea[placeholder] {
 
 #user-commits, #user-deadlines {
   margin-top: 30px;
+  background-color: white;
+  padding: 10px;
 }
 
 #user-comp-details p {

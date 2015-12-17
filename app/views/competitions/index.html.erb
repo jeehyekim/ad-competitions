@@ -2,7 +2,7 @@
 
 <!-- MAIN : RECENTLY ADDED -->
 <h1 class="text-center">Recently Added</h1>
-  <div class="col-md-10 col-md-offset-2 col-sm-12">
+  <div class="col-md-10 col-md-offset-2 col-sm-12" id="comp-row">
     <% @competitions.limit(3).each do | competition | %>
       <div class="card col-sm-3 col-sm-12">
         <div class="card-block">
@@ -24,8 +24,8 @@
   </div>
 
 
-  <div class="text-center">
-    <h1><a href="/category/graphic">Graphic Design</a></h1>
+  <div id="comp-row">
+    <h1 class="text-center" ><a href="/category/graphic">Graphic Design</a></h1>
     <div class="col-md-10 col-md-offset-2 col-sm-12">
       <% @competitions.each do |competition| %>
           
