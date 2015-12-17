@@ -1,7 +1,8 @@
 <!-- <section> -->
   <div class="col-md-10 col-md-offset-1 col-sm-12 col-sm-offset-0" id="comp-row">
     <h1 class="text-center"><%= @category.upcase %></h1>
-    <% @competitions.all.each do | competition | %>
+
+    <% @competitions.tagged_with(params[:tag]).all.each do | competition | %>
       <div class="col-md-6 col-sm-6">
         <div class="card">
           <% if competition.image_url %>
@@ -12,8 +13,10 @@
           </div>
           <div class="card-block">
             <small><%= raw tag_links(competition.all_tags) %></small><br>
-            <%= link_to "Edit", edit_competition_path(competition), id: "comp-edit"%>
-            <%= link_to "Delete", competition_path(competition), method: :delete, id: "comp-delete"%>
+            <% if current_user && current_user.admin? %>
+              <%= link_to "Edit", edit_competition_path(competition), id: "comp-edit"%>
+              <%= link_to "Delete", competition_path(competition), method: :delete, id: "comp-delete"%>
+            <% end %>
           </div>
         </div>  
       </div>
