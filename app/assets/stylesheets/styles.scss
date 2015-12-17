@@ -3,36 +3,6 @@
 // font-family: 'Josefin Sans', sans-serif;300, 400, 600, 700
 
 
-// section {
-//   height: 80vh;
-// }
-// body {
-//   // height: 80%;
-//   // background-color: blue;
-//   background: url("http://i.imgur.com/IOQ77j6.jpg") no-repeat center center fixed; 
-//   -webkit-background-size: cover;
-//   -moz-background-size: cover;
-//   -o-background-size: cover;
-//   background-size: cover;
-// }
-
-
-
-// div {
-//   margin-bottom: 100px;
-// }
-
-// #bg {
-//   position: fixed; 
-//   top: 0; 
-//   left: 0; 
-  
-//   /* Preserve aspet ratio */
-//   min-width: 100%;
-//   min-height: 100%;
-// }
-
-
 h1, .show-title {
   margin-top: 100px;
   margin-bottom: 50px;
@@ -41,13 +11,6 @@ h1, .show-title {
   color: blue;
   // -webkit-text-stroke: 1px blue;
 }
-
-// h1 a {
-//   color: white;
-//   -webkit-text-stroke: 2px blue;
-//   text-decoration: none;
-//   margin-top: 50px;
-// }
 
 h1 a:hover {
   text-decoration: none;
@@ -105,16 +68,13 @@ p {
 .card {
   margin-right: 15px;
   margin-bottom: 20px;
-  // padding:10px;
-  // border: 1px solid blue;
+  height: 450px;
 }
 
 
 // Navbar
 
-// .navbar {
-//   margin-top: 150px;
-// }
+
 
 #navbar-brand {
   font-size: 14px;
