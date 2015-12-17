@@ -28,7 +28,7 @@ class CompetitionsController < ApplicationController
 
   def show
     @competition = Competition.find(params[:id])
-    @user = User.find(current_user)
+    # @user = User.find(current_user)
     render :show
   end
 
