@@ -2,38 +2,38 @@
 <section>
 <div class="col-sm-10 col-sm-offset-1 col-xs-12">
 
-<h3 class="text-center show-title competition" id="<%= @competition.id %>"><%= @competition.title.upcase %></h3>
-  <div class="col-sm-6 col-sm-offset-3">
-      <img src="<%= @competition.image_url %>" id="show-image">
+  <h3 class="text-center show-title competition" id="<%= @competition.id %>"><%= @competition.title.upcase %></h3>
+    <div class="col-sm-6 col-sm-offset-3">
+        <img src="<%= @competition.image_url %>" id="show-image">
+    </div>
+    <div class="col-sm-4 col-sm-offset-2" id="comp-details">
+      
+      <a href="<%= @competition.website %>" id="comp-website"><small>Visit Website</small></a><br>
+      <p><small> Category: <%= raw tag_links(@competition.all_tags) %></small><br><hr>
+      <% if !@competition.early_bird.nil? %>
+        <span id="user-dates">Early Bird Deadline: </span><%= @competition.early_bird.to_date.strftime("%m/%d/%Y") %><br>
+      <% end %>
+      <% if !@competition.deadline.nil? %>
+      <span id="user-dates" data-deadline='<%= @competition.deadline %>'>Final Deadline: </span><%= @competition.deadline.to_date.strftime("%m/%d/%Y") %></p>
+      <% end %>
+
+      <% if current_user && current_user.admin? %>
+        <%= link_to "Edit", edit_competition_path(@competition), id: "comp-edit"%>
+        <%= link_to "Delete", competition_path(@competition), method: :delete, id: "comp-delete"%>
+      <% end %>
+      <!-- <div id="new-comp-btn"> -->
+        <!-- <button><span class="glyphicon glyphicon-plus-sign" ></span></button> -->
+        <br>
+        <br>
+        <a href="/competitions/new" class="btn" id="saveToUser">SAVE COMPETITION</a>
+      <!-- </div> -->
+    </div>
+
+    <div class="col-sm-5 " id="comp-details">
+        <p id="comp-desc"><%= simple_format(@competition.description) %></p>
+    </div>
+
   </div>
-  <div class="col-sm-4 col-sm-offset-2" id="comp-details">
-    
-    <a href="<%= @competition.website %>" id="comp-website"><small>Visit Website</small></a><br>
-    <p><small> Category: <%= raw tag_links(@competition.all_tags) %></small><br><hr>
-    <% if !@competition.early_bird.nil? %>
-      <span id="user-dates">Early Bird Deadline: </span><%= @competition.early_bird.to_date.strftime("%m/%d/%Y") %><br>
-    <% end %>
-    <% if !@competition.deadline.nil? %>
-    <span id="user-dates" data-deadline='<%= @competition.deadline %>'>Final Deadline: </span><%= @competition.deadline.to_date.strftime("%m/%d/%Y") %></p>
-    <% end %>
-
-    <% if current_user && current_user.admin? %>
-      <%= link_to "Edit", edit_competition_path(@competition), id: "comp-edit"%>
-      <%= link_to "Delete", competition_path(@competition), method: :delete, id: "comp-delete"%>
-    <% end %>
-
-  </div>
-
-
-  <div class="col-sm-5 " id="comp-details">
-      <p id="comp-desc"><%= simple_format(@competition.description) %></p>
-  </div>
-
-  <div id="new-comp-btn">
-    <button><span class="glyphicon glyphicon-plus-sign" id="saveToUser"></span></button>
-  </div>
-  
-</div>
 <p class='current_user' id='<%= current_user.id %>' style='display:none'></p>
 </section>
 

@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
   get'category/:tag', to: 'categories#index', as: "tag"
 
-  resources :commitments, only: [:new, :create]
+  resources :commitments, only: [:new, :create, :destroy]
 
   resources :deadlines, only: [:new, :create]
 

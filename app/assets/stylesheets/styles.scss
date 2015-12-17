@@ -295,6 +295,9 @@ button, .btn {
   border-radius: 0px !important;
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 600;
+  -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
 }
 
 // User Show Page

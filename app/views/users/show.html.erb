@@ -18,7 +18,10 @@
       <div id="user-comp-details">
         <% @user.competitions.each do |competition| %>
           <h4><%= link_to competition.title.upcase, competition_path(competition) %></h4>
-          <p><small> Category: <%= raw tag_links(competition.all_tags) %></small><br>
+
+          <p><small> Category: <%= raw tag_links(competition.all_tags) %></small>
+          <!-- <a href=""><i class="ion-close-circled"></i></a> -->
+          <br>
           <% if !competition.early_bird.nil? %>
             <span id="user-dates">Early Bird Deadline: </span><%= competition.early_bird.to_date.strftime("%m/%d/%Y") %><br>
           <% end %>
