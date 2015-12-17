@@ -1,33 +1,33 @@
 <div class="col-sm-8 col-sm-offset-2">
-  <h1 class="text-center">New Competition</h1>
+  <h1 class="text-center">NEW COMPETITION</h1>
 </div>
 
 <div class="col-sm-8 col-sm-offset-2">
   <%= form_for @competition, url: competitions_path do |f| %>
   <form>
     <fieldset class="form-group">
-      <%= f.text_field :title, placeholder: "Title", class: "form-control" %>
+      <%= f.text_field :title, placeholder: "TITLE", class: "form-control" %>
     </fieldset>
     <fieldset class="form-group">
-      <%= f.text_field :website, placeholder: "Website URL", class: "form-control" %>
+      <%= f.text_field :website, placeholder: "WEBSITE URL", class: "form-control" %>
     </fieldset>
     <fieldset class="form-group">
-      <%= f.date_field :early_bird, placeholder: "Early Bird Deadline", class: "form-control" %>
+      <%= f.date_field :early_bird, placeholder: "EARLY REGISTRATION DEADLINE", class: "form-control" %>
     </fieldset>
     <fieldset class="form-group">
-      <%= f.date_field :deadline, placeholder: "Final Deadline", class: "form-control" %>
+      <%= f.date_field :deadline, placeholder: "FINAL DEADLINE", class: "form-control" %>
     </fieldset>
     <fieldset class="form-group">
-      <%= f.text_area :description, placeholder: "Description", size:"4x15", class: "form-control" %>
+      <%= f.text_area :description, placeholder: "DESCRIPTION", size:"4x15", class: "form-control" %>
     </fieldset>
     <fieldset class="form-group">
-      <%= f.text_field :image_url, placeholder: "Image URL", class: "form-control" %>
+      <%= f.text_field :image_url, placeholder: "IMAGE URL", class: "form-control" %>
     </fieldset>
     <fieldset class="form-group">
-      <%= f.text_field :all_tags, placeholder: "Categories(separated by commas)", class: "form-control" %>
+      <%= f.text_field :all_tags, placeholder: "CATEGORIES(separated by commas)", class: "form-control" %>
     </fieldset>
    
-    <%= f.submit "Create", class: "btn" %>
+    <%= f.submit "CREATE", class: "btn pull-right" %>
   </form>
   <% end %>
 </div>

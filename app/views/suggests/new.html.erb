@@ -1,28 +1,28 @@
 <div class="col-sm-8 col-sm-offset-2">
-  <h1 class="text-center">Suggest a Competition</h1>
-  <h5 class="text-center">Can't find a specific competition? Submit some brief information about it and we'll get back to you!</h5>
+  <h1 class="text-center">SUGGEST A COMPETITION</h1>
+  <h4 class="text-center">Can't find a specific competition? Submit some brief information about it and we'll get back to you!</h4>
 </div>
 
   <div class="col-sm-8 col-sm-offset-2" id="comp-suggest-form">
     <%= form_for @suggest do |f| %>
     <form>
       <fieldset class="form-group">
-        <%= f.text_field :name, :required => true, placeholder: "Name", class: "form-control" %>
+        <%= f.text_field :name, :required => true, placeholder: "NAME", class: "form-control" %>
       </fieldset>
       <fieldset class="form-group">
-        <%= f.text_field :email, :required => true, placeholder: "Email", class: "form-control" %>
+        <%= f.text_field :email, :required => true, placeholder: "EMAIL", class: "form-control" %>
       </fieldset>
       <fieldset class="form-group">
-        <%= f.text_field :title, :required => true, placeholder: "Competition Title", class: "form-control" %>
+        <%= f.text_field :title, :required => true, placeholder: "COMPETITION TITLE", class: "form-control" %>
       </fieldset>
       <fieldset class="form-group">
-        <%= f.text_field :website, :required => true, placeholder: "Website", class: "form-control" %>
+        <%= f.text_field :website, :required => true, placeholder: "WEBSITE URL", class: "form-control" %>
         </fieldset>
       <fieldset class="form-group">
-        <%= f.text_area :message, :as => :text, :required => true, placeholder: "Message", class: "form-control" %>
+        <%= f.text_area :message, :as => :text, :required => true, placeholder: "MESSAGE", class: "form-control" %>
       </fieldset>
 
-        <%= f.submit 'Send message', :class=> "btn" %>
+        <%= f.submit 'SEND MESSAGE', :class=> "btn pull-right" %>
     </form>
     <% end %>
   </div>

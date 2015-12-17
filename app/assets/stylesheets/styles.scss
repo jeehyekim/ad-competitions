@@ -1,33 +1,53 @@
 // font-family: 'Oswald', sans-serif; 300,400
 // font-family: 'Yeseva One', cursive;
-// font-family: 'Josefin Sans', sans-serif;300, 400, 600
+// font-family: 'Josefin Sans', sans-serif;300, 400, 600, 700
 
 
 // section {
 //   height: 80vh;
 // }
+// body {
+//   // height: 80%;
+//   // background-color: blue;
+//   background: url("http://i.imgur.com/IOQ77j6.jpg") no-repeat center center fixed; 
+//   -webkit-background-size: cover;
+//   -moz-background-size: cover;
+//   -o-background-size: cover;
+//   background-size: cover;
+// }
 
-html, body {
-  // height: 80%;
-  background-color: blue;
-}
+
 
 // div {
 //   margin-bottom: 100px;
 // }
 
+// #bg {
+//   position: fixed; 
+//   top: 0; 
+//   left: 0; 
+  
+//   /* Preserve aspet ratio */
+//   min-width: 100%;
+//   min-height: 100%;
+// }
+
+
 h1, .show-title {
   margin-top: 100px;
   margin-bottom: 50px;
-  font-family: 'Yeseva One', cursive;
-  color: white;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700;
+  color: blue;
+  // -webkit-text-stroke: 1px blue;
 }
 
-h1 a {
-  color: white;
-  text-decoration: none;
-  margin-top: 50px;
-}
+// h1 a {
+//   color: white;
+//   -webkit-text-stroke: 2px blue;
+//   text-decoration: none;
+//   margin-top: 50px;
+// }
 
 h1 a:hover {
   text-decoration: none;
@@ -35,7 +55,8 @@ h1 a:hover {
 }
 
 h3, h4, h5 {
-  font-family: 'Yeseva One', cursive;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700;
 }
 
 h4 {
@@ -83,6 +104,9 @@ p {
 
 .card {
   margin-right: 15px;
+  margin-bottom: 20px;
+  // padding:10px;
+  // border: 1px solid blue;
 }
 
 
@@ -131,12 +155,30 @@ p {
   border-radius: 0px !important;
 }
 
-// Footer
-#footer {
-  height: 50px;
-  clear:both;
-  padding-top: 30px;
-}
+
+
+
+
+
+
+// // Footer
+// #footer {
+//   height: 50px;
+//   clear:both;
+//   padding-top: 30px;
+// }
+
+// #footer {
+//   position: fixed;
+//   bottom: 0;
+//   height: 60px;
+//   background-color: lightgray;
+//   width:100%;
+// }
+
+// .footer-copy {
+//   color: blue;
+// }
 
 
 
@@ -194,10 +236,12 @@ small a:hover {
 // Competition Suggest Form
 #comp-suggest-form {
   margin-top: 50px;
+  padding-bottom: 50px;
 }
 
 
 // New Competition Form
+
 
 .form-control {
   border-radius: 0px !important;
@@ -206,7 +250,7 @@ small a:hover {
 input, textarea {
   color:black;
   font-size: 16px;
-  border: 1px solid lightgray;
+  border: 1px solid blue !important;
   box-shadow: none !important;
 } 
 
@@ -241,11 +285,17 @@ textarea:-ms-textarea-placeholder {
 input[placeholder], textarea[placeholder] {
    font-weight: bold; 
    color:black !important;
-   font-family: 'Yeseva One', cursive;
+   font-family: 'Josefin Sans', sans-serif;
 }
 
-// User New Page
-
+button, .btn {
+  color: white;
+  background-color: blue;
+  // border: 4px solid blue;
+  border-radius: 0px !important;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 600;
+}
 
 // User Show Page
 

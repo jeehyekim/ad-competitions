@@ -1,20 +1,23 @@
-<section>
-<h1 class="text-center"><%= @category %></h1>
-  <div class="col-md-10 col-md-offset-2 col-sm-12">
-    <% @competitions.limit(12).each do | competition | %>
-      <div class="card col-sm-3 col-sm-12">
-        <div class="card-block">
-            <h3><%= link_to competition.title, competition_path(competition) %></h3>
-        </div>
-        <img src="<%= competition.image_url %>" alt="card-image" style="width: 100%">
+<!-- <section> -->
+  <div class="col-md-10 col-md-offset-1 col-sm-12 col-sm-offset-0" id="comp-row">
+    <h1 class="text-center"><%= @category.upcase %></h1>
+    <% @competitions.all.each do | competition | %>
+      <div class="col-md-6 col-sm-6">
+        <div class="card">
+          <% if competition.image_url %>
+            <img class="card-image" src="<%= competition.image_url %>" alt="card-image" style="width: 100%">
+          <% end %>
           <div class="card-block">
-            <small><%= raw tag_links(competition.all_tags) %></small>
-            <p><%= truncate(competition.description, :length => 200) %></p>
+              <h4><%= link_to competition.title.upcase, competition_path(competition) %></h4>
+          </div>
+          <div class="card-block">
+            <small><%= raw tag_links(competition.all_tags) %></small><br>
             <%= link_to "Edit", edit_competition_path(competition), id: "comp-edit"%>
             <%= link_to "Delete", competition_path(competition), method: :delete, id: "comp-delete"%>
           </div>
-      </div>  
+        </div>  
+      </div>
     <% end %>
   </div>
 </div>
-</section>
+<!-- </section>  -->

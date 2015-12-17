@@ -1,12 +1,12 @@
 <div class="col-sm-4 col-sm-offset-4">
-  <h1 class="text-center">Login</h1>
+  <h1 class="text-center">LOGIN</h1>
   <%= form_for :user, url: login_path do |f| %>
-    <%= f.text_field :email, class:"form-control", placeholder: "Email" %>
+    <%= f.text_field :email, class:"form-control", placeholder: "EMAIL" %>
     <br>
-    <%= f.password_field :password, class:"form-control", placeholder: "Password" %>
+    <%= f.password_field :password, class:"form-control", placeholder: "PASSWORD" %>
     <br>
     <div class="text-right">
-      <%= f.submit "Login", class:"btn" %>
+      <%= f.submit "LOGIN", class:"btn" %>
     </div>
   <% end %>
 </div> 

@@ -6,18 +6,18 @@
     <% else %>
      <%= image_tag @user.image.url(:thumb) %>
     <% end %>
-    <h4 class="text-center">Welcome, <%= @user.name %></h4>
+    <h4 class="text-center">WELCOME, <%= @user.name %></h4>
     <h6><%= link_to "Edit Profile", edit_user_path(@user) %></h6>
     <h6>Joined: <%= time_ago_in_words(@user.created_at) %></h6>
   </div>
 
   <div class="col-sm-4 col-sm-offset-1" id="user-commits">
-    <h4 class="text-center">Saved Competitions</h4>
+    <h4 class="text-center">SAVED COMPETITIONS</h4>
     <hr>
 
       <div id="user-comp-details">
         <% @user.competitions.each do |competition| %>
-          <h4><%= link_to competition.title, competition_path(competition) %></h4>
+          <h4><%= link_to competition.title.upcase, competition_path(competition) %></h4>
           <p><small> Category: <%= raw tag_links(competition.all_tags) %></small><br>
           <% if !competition.early_bird.nil? %>
             <span id="user-dates">Early Bird Deadline: </span><%= competition.early_bird.to_date.strftime("%m/%d/%Y") %><br>
@@ -35,13 +35,13 @@
  
   
     <div class="col-sm-5 col-sm-offset-1" id="user-deadlines">
-      <h4 class="text-center">Upcoming Dates</h4>
+      <h4 class="text-center">UPCOMING DATES</h4>
       <hr>
       <div class="user-deadline-dates">
       <% @deadlines.each do |deadline| %>
         <% if !deadline.date.nil? %>
           <p><small><%= deadline.kind %></small><%= deadline.date.to_date.strftime("%m/%d/%Y") %></p>
-          <h4><%= deadline.competition.title %></h4>
+          <h4><%= deadline.competition.title.upcase %></h4>
           <hr>
         <% end %>
       <% end %>
