@@ -23,12 +23,14 @@
 
 </head>
 <body>
+  
+  <%= render 'navbar' %>
+  
+  <%= yield %>
+
+  <%= render 'html_footer' %>
+  
 <!-- <img src="http://imgur.com/JZlYjPx" id="bg" alt=""> -->
-<%= render 'navbar' %>
-
-<%= yield %>
-
-<%= render 'html_footer' %>
 
 </body>
 </html>

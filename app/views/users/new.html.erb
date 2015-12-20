@@ -1,23 +1,23 @@
-<div class="col-sm-8 col-sm-offset-2">
-  <h1 class="text-center">Sign Up</h1>
+<div class="col-sm-8 col-sm-offset-2" >
+  <h1 class="text-center">SIGN UP</h1>
 </div>
 
-<div class="col-sm-8 col-sm-offset-2">
+<div class="col-sm-8 col-sm-offset-2" id="signupform">
   <%= form_for @user, url: '/users' do |f| %>
   <form>
   <fieldset class="form-group">
     <%= f.file_field :image, class: "form-control", placeholder: 'Profile Picture' %>
   </fieldset>
     <fieldset class="form-group">
-      <%= f.text_field :name, placeholder: "Full Name", class: "form-control" %>
+      <%= f.text_field :name, placeholder: "FULL NAME", class: "form-control" %>
     </fieldset>
     <fieldset class="form-group">
-      <%= f.text_field :email, placeholder: "Email", class: "form-control" %>
+      <%= f.text_field :email, placeholder: "EMAIL", class: "form-control" %>
     </fieldset>
     <fieldset class="form-group">
-      <%= f.password_field :password, placeholder: "Password", class: "form-control" %>
+      <%= f.password_field :password, placeholder: "PASSWORD", class: "form-control" %>
     </fieldset>
-    <%= f.submit "Sign Up", class: "btn pull-right" %>
+    <%= f.submit "SIGN UP", class: "btn pull-right" %>
     <!-- add link to login page -->
   </form>
   <% end %>

@@ -118,15 +118,21 @@ p {
 
 
 
-
-
-
-
 // // Footer
 .social-media a i {
   margin-left: 10px;
 }
 
+
+#signupform + #footer {
+  bottom: 0;
+  position:absolute;
+}
+
+#loginform + #footer {
+  bottom: 0;
+  position:absolute;
+}
 
 
 // Index page
