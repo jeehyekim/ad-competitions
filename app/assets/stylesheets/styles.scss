@@ -9,7 +9,6 @@ h1, .show-title {
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 700;
   color: blue;
-  // -webkit-text-stroke: 1px blue;
 }
 
 h1 a:hover {
@@ -74,8 +73,6 @@ p {
 
 // Navbar
 
-
-
 #navbar-brand {
   font-size: 14px;
   font-family: 'Oswald', sans-serif;
@@ -130,16 +127,12 @@ p {
   margin-left: 10px;
 }
 
-.social-media {
-  margin-bottom: 20px;
-}
 
 
 // Index page
 #comp-row {
   margin-bottom: 100px;
 }
-
 
 
 
@@ -186,11 +179,14 @@ small a:hover {
   color:blue;
 }
 
+
+
 // Competition Suggest Form
 #comp-suggest-form {
   margin-top: 50px;
   padding-bottom: 50px;
 }
+
 
 
 // New Competition Form
@@ -252,6 +248,8 @@ button, .btn {
     -moz-box-shadow: none;
     box-shadow: none;
 }
+
+
 
 // User Show Page
 
