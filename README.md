@@ -17,8 +17,7 @@ This is a Ruby application using the Rails framework.
 
 
 ###With more time...
-1. Make it a more expanded app more tailored to freelance designers and artists. Add ability to keep track of key contacts, a monthly and annual checklist of things they need to do to keep their freelance business running.
-2. Set up welcome emails delivered to new users.
-3. Send email notifications to users of deadlines that are approaching for competitions that they've selected.
-4. In order for users to sign up and keep track of competition dates, users pay a small fee to pay for the service.
+1. Send email notifications to users of deadlines that are approaching for competitions that they've selected.
+
+
 
